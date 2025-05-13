@@ -1,0 +1,42 @@
+.banner-text {
+  font-size: smaller;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.bottom-banner-text {
+  font-size: smaller;
+  font-weight: bolder;
+  text-align: center;
+  color: var(--gray-60);
+}
+
+.url-info-text {
+  width: 100%;
+  margin-top: 8px;
+  font-weight: bolder;
+  font-style: normal;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: var(--navyblue-100);
+}
+
+.sm-bold-text {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* md */
+@media (min-width: 768px) {
+  .banner-text {
+    text-align: end;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  .url-info-text {
+    font-size: larger;
+  }
+}

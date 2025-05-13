@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta
+      charset="UTF-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1,  minimum-scale=1,maximum-scale=3, user-scalable=yes"
+    />
+    <title>Error Page</title>
+
+    <style>
+      /*in the Name of Allah*/
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        color: white;
+        --wide-width: 100vh;
+      }
+
+      #view_layout {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        background: url("https://cdn.pixabay.com/photo/2020/11/07/01/28/abstract-5719221_960_720.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .container {
+        min-height: 512px;
+        max-height: 512px;
+        max-width: 512px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        background: rgba(255, 255, 255, 0.178);
+      }
+
+      .error_message {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #bong_prelim {
+        font-size: 22px;
+        color: rgba(255, 0, 0, 0.562);
+      }
+
+      #bong {
+        font-size: 33px;
+        color: rgba(255, 0, 0, 0.562);
+      }
+
+      .error_code {
+        min-height: 300px;
+        max-height: 300px;
+        display: flex;
+        flex-grow: 1;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .error_code div {
+        height: 100px;
+        width: 100px;
+        margin: 25px;
+        display: flex;
+        background: rgba(0, 0, 0, 0.555);
+        align-items: center;
+        justify-content: center;
+      }
+
+      .error_code div:nth-child(1) {
+        animation: swing 3s infinite;
+      }
+
+      .error_code div:nth-child(2) {
+        animation: swing 6s infinite;
+      }
+
+      .error_code div:nth-child(3) {
+        animation: swing 2s infinite;
+      }
+
+      .error_code div span {
+        font: bold;
+        font-size: 36px;
+        display: flex;
+        color: white;
+      }
+
+      @keyframes swing {
+        0% {
+          transform: rotate3d(1, 0, 0, 0deg);
+        }
+        50% {
+          transform: rotate3d(1, 0, 0, 89deg);
+        }
+        100% {
+          transform: rotate3d(1, 0, 0, 0deg);
+        }
+      }
+
+      #wave_holder {
+        position: absolute;
+        min-height: 100%;
+        min-width: 100%;
+        background: transparent;
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+      }
+      .wave {
+        position: absolute;
+        min-width: 20px;
+        min-height: 20px;
+        max-width: 20px;
+        max-height: 20px;
+        flex: 1;
+        background: transparent;
+        border-radius: 50%;
+        border: 5px solid #6666;
+      }
+
+      #wave1 {
+        animation: waver1 10.5s ease-out infinite;
+      }
+      #wave2 {
+        animation: waver2 10.5s ease-out infinite;
+      }
+
+      @keyframes waver1 {
+        0% {
+          border: none;
+        }
+        45% {
+          min-width: var(--wide-width);
+          min-height: var(--wide-width);
+          max-width: var(--wide-width);
+          max-height: var(--wide-width);
+          z-index: 2;
+          box-shadow: 15px 15px 15px #6666;
+        }
+        50% {
+          border: none;
+          box-shadow: none;
+        }
+        100% {
+          border: none;
+          box-shadow: none;
+        }
+      }
+
+      @keyframes waver2 {
+        0% {
+          border: none;
+        }
+        55% {
+          border: none;
+        }
+        80% {
+          min-width: var(--wide-width);
+          min-height: var(--wide-width);
+          max-width: var(--wide-width);
+          max-height: var(--wide-width);
+          z-index: 2;
+          box-shadow: 15px 15px 15px #6666;
+        }
+
+        90% {
+          border: none;
+          box-shadow: none;
+        }
+
+        100% {
+          border: none;
+          box-shadow: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="view_layout" th:style="'background: url(' + ${layout_background} + '); background-size:cover; background-repeat:no-repeat;'">
+      <div id="wave_holder">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+      </div>
+
+      <div class="container">
+        <div class="error_code">
+          <div><span>4</span></div>
+          <div><span>0</span></div>
+          <div><span>4</span></div>
+        </div>
+        <div class="error_message">
+          <span id="bong_prelim">This Page Not Found or Url is Invalid</span>
+
+          <span id="bong">Ahh!</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
