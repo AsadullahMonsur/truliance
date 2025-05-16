@@ -207,31 +207,37 @@
 }
 
 .front {
+  background: url("/image/svg/dice_face_one.svg");
   background-repeat: no-repeat;
   background-size: cover;
   transform: translateZ(50px);
 }
 .back {
+  background: url("/image/svg/dice_face_two.svg");
   background-repeat: no-repeat;
   background-size: cover;
   transform: rotateY(180deg) translateZ(50px);
 }
 .right {
+  background: url("/image/svg/dice_face_three.svg");
   background-repeat: no-repeat;
   background-size: cover;
   transform: rotateY(90deg) translateZ(50px);
 }
 .left {
+  background: url("/image/svg/dice_face_four.svg");
   background-repeat: no-repeat;
   background-size: cover;
   transform: rotateY(-90deg) translateZ(50px);
 }
 .top {
+  background: url("/image/svg/dice_face_five.svg");
   background-repeat: no-repeat;
   background-size: cover;
   transform: rotateX(90deg) translateZ(50px);
 }
 .bottom {
+  background: url("/image/svg/dice_face_six.svg");
   background-repeat: no-repeat;
   background-size: cover;
   transform: rotateX(-90deg) translateZ(50px);
@@ -260,6 +266,14 @@
 
 #upload-submit-button-id:focus-within ~ #progress-bar-container-id {
   opacity: 1;
+}
+
+#prompt-message-id {
+  opacity: 1;
+}
+
+#upload-submit-button-id:focus-within ~ #prompt-message-id {
+  opacity: 0;
 }
 /* progress end */
 

@@ -178,7 +178,7 @@
               enctype="multipart/form-data"
             >
               <div class="file_picker_container">
-                <input class="file_picker" type="file" name="files" multiple />
+                <input class="file_picker" type="file" name="files" multiple required/>
               </div>
 
               <button
@@ -188,7 +188,13 @@
               >
                 Upload
               </button>
-
+              <div
+                id="prompt-message-id"
+                class="bottom-banner-container"
+                th:if="${message}"
+              >
+                <span class="url-info-text" th:text="${message}"></span>
+              </div>
               <div
                 id="progress-bar-container-id"
                 class="progress-bar-container"
@@ -206,10 +212,6 @@
                 </div>
               </div>
             </form>
-          </div>
-
-          <div class="bottom-banner-container" th:if="${message}">
-            <span class="url-info-text" th:text="${message}"></span>
           </div>
         </main>
       </div>

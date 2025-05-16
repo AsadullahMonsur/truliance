@@ -51,7 +51,6 @@ public class FileTransferController {
 
     @RequestMapping("upload")
     private String upload_page(Model model){
-
         return "upload_view";
     }
 
@@ -66,6 +65,7 @@ public class FileTransferController {
                                 RedirectAttributes redirect){
 
         redirect.addFlashAttribute("hint", (files.size()-1)+" files selected");
+
 
         for (MultipartFile file : files) {
             if (!file.isEmpty()) {

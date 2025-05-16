@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1">
+    <g
+       id="g1"
+       transform="translate(0,50)">
+      <circle
+         style="fill:#000000"
+         id="path1"
+         cx="206"
+         cy="256"
+         r="25" />
+      <circle
+         style="fill:#000000"
+         id="circle1"
+         cx="305.5"
+         cy="156"
+         r="25" />
+      <circle
+         style="fill:#000000"
+         id="circle3"
+         cx="306"
+         cy="256"
+         r="25" />
+      <circle
+         style="fill:#000000"
+         id="circle4"
+         cx="256"
+         cy="206"
+         r="25" />
+      <circle
+         style="fill:#000000"
+         id="circle5"
+         cx="206"
+         cy="156"
+         r="25" />
+    </g>
+  </g>
+</svg>
