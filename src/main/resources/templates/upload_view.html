@@ -2,14 +2,14 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta
-            charset="UTF-8"
-            name="viewport"
-            content="width=device-width, initial-scale=1,  minimum-scale=1,maximum-scale=3, user-scalable=yes"
+      charset="UTF-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1,  minimum-scale=1,maximum-scale=3, user-scalable=yes"
     />
 
     <meta
-            http-equiv="cache-control"
-            content="max-age=0, no-cache, no-store, must-revalidate, private"
+      http-equiv="cache-control"
+      content="max-age=0, no-cache, no-store, must-revalidate, private"
     />
     <meta http-equiv="pragma" content="no-cache" />
     <meta http-equiv="expires" content="0" />
@@ -21,17 +21,19 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
 
-    <link rel="stylesheet"
-          href="../static/css/style.css"
-          th:href="@{/css/style.css}"
+    <link
+      rel="stylesheet"
+      href="../static/css/style.css"
+      th:href="@{/css/style.css}"
     />
 
-    <link rel="stylesheet"
-          href="../static/css/text_style.css"
-          th:href="@{/css/text_style.css}"/>
+    <link
+      rel="stylesheet"
+      href="../static/css/text_style.css"
+      th:href="@{/css/text_style.css}"
+    />
 
     <link rel="icon" th:href="@{/image/favicon/favicon.png}" />
-
   </head>
   <body>
     <section class="section-color-primary">
@@ -179,7 +181,30 @@
                 <input class="file_picker" type="file" name="files" multiple />
               </div>
 
-              <button class="upload-submit-button" type="submit">Upload</button>
+              <button
+                id="upload-submit-button-id"
+                class="upload-submit-button"
+                type="submit"
+              >
+                Upload
+              </button>
+
+              <div
+                id="progress-bar-container-id"
+                class="progress-bar-container"
+              >
+                <div class="upload_hint">Uploading Content ...</div>
+                <div class="scene">
+                  <div class="cube">
+                    <div class="face front"></div>
+                    <div class="face back"></div>
+                    <div class="face right"></div>
+                    <div class="face left"></div>
+                    <div class="face top"></div>
+                    <div class="face bottom"></div>
+                  </div>
+                </div>
+              </div>
             </form>
           </div>
 
